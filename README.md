@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/NestJsPlayground/JobMicroService.svg?branch=master)](https://travis-ci.org/NestJsPlayground/JobMicroService)
 
-# NestJs seed for kubernetes
+# Register jobs microservice
 
 **I created this seed for my educational purposes. Some design decisions will not make sense as why I used consul if kubernetes is already providing service discovery...** So if you use this seed you will probably have to do some clean ups.
 
@@ -9,11 +9,6 @@
   <img src="https://github.com/kubernetes/kubernetes/raw/master/logo/logo.png" width="50">
 </div>
 
-## Description
-
-Seed for [Nest](https://github.com/nestjs/nest) framework with mongodb, swagger and consul (for auto discovery). With config ready for travis build, docker push and kubernetes deployment.
-
-> Note: you probably don't need Consul if you are using Kubernetes
 
 ## Features
 
@@ -50,10 +45,4 @@ $ docker-compose build && docker-compose up
 
 Go to `kubernetes/` folder and use `kubectl apply -f` command for each yaml file.
 
-## Todo
 
-- optimize .travis.yml
-
-## Worth reading
-
-- [The Twelve-Factor App](https://12factor.net)
