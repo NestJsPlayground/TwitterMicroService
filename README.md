@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/TilenTomakic/nestjs-seed.svg?branch=master)](https://github.com/TilenTomakic/nestjs-seed)
+[![Build Status](https://travis-ci.org/NestJsPlayground/JobMicroService.svg?branch=master)](https://travis-ci.org/NestJsPlayground/JobMicroService)
 
 # NestJs seed for kubernetes
 
