@@ -6,6 +6,7 @@ import { LoggerMiddleware } from './logger/logger.middleware';
 import { LoggerModule } from './logger/logger.module';
 import { ConsulModule } from './consul/consul.module';
 import { AuthMiddleware } from './auth/auth.middleware';
+import { JobModule } from './job/job.module';
 
 @Module({
   controllers: [
@@ -15,6 +16,7 @@ import { AuthMiddleware } from './auth/auth.middleware';
   modules: [
     HealthModule,
     LoggerModule,
+    JobModule,
     ConsulModule
   ],
 })
@@ -23,8 +25,8 @@ export class ApplicationModule implements NestModule {
     consumer.apply(LoggerMiddleware)
       .forRoutes( { path: '*', method: RequestMethod.ALL });
 
-    // consumer.apply(AuthMiddleware).forRoutes(
-    //   { path: '/foo-bar', method: RequestMethod.ALL }
-    // );
+    consumer.apply(AuthMiddleware).forRoutes(
+      { path: '/job', method: RequestMethod.ALL }
+    );
   }
 }

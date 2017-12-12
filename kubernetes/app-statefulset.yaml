@@ -1,25 +1,25 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: apiseed
+  name: apijob
 spec:
   replicas: 1
   template:
     metadata:
       labels:
-        app: apiseed
+        app: apijob
         tier: frontend
     spec:
       containers:
-      - image: tilen/nestjs-seed
-        name: apiseed
+      - image: tilen/demo-svc-job
+        name: apijob
         ports:
         - containerPort: 3000
           name: server
           protocol: TCP
         env:
           - name: MONGO
-            value: "mongo:27017"
+            value: "ds129166.mlab.com:29166"
           - name: NODE_ENV
             value: "prod"
           - name: LOGSTASH_HOST
