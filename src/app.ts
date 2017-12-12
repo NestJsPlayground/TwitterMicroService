@@ -12,8 +12,8 @@ async function bootstrap() {
 	const app = await NestFactory.create(ApplicationModule);
 
   const options = new DocumentBuilder()
-    .setTitle('NestJs seed')
-    .setDescription('The seed API description')
+    .setTitle('JOB service')
+    .setDescription('The brains of operation')
     .setVersion('1.0')
     .addTag('seed')
     .build();
