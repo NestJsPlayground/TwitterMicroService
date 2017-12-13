@@ -9,7 +9,7 @@ spec:
       labels:
         app: apitwitter
         tier: frontend
-        cversion: "3"
+        cversion: "4"
     spec:
       containers:
       - image: tilen/demo-svc-twitter
