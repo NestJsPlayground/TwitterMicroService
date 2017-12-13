@@ -1,11 +1,11 @@
 import { Module } from '@nestjs/common';
 import { DatabaseModule } from '../database/database.module';
-import { JobController } from './job.controller';
-import { entryProviders } from './job.providers';
+import { TwitterController } from './twitter.controller';
+import { entryProviders } from './twitter.providers';
 
 @Module({
     controllers: [
-      JobController
+      TwitterController
     ],
     modules: [
       DatabaseModule
@@ -14,4 +14,4 @@ import { entryProviders } from './job.providers';
       ...entryProviders
     ],
 })
-export class JobModule {}
+export class TwitterModule {}

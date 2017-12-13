@@ -12,7 +12,7 @@ async function bootstrap() {
 	const app = await NestFactory.create(ApplicationModule);
 
   const options = new DocumentBuilder()
-    .setTitle('JOB service')
+    .setTitle('TWITTER service')
     .setDescription('The brains of operation')
     .setVersion('1.0')
     .addTag('seed')
