@@ -9,7 +9,6 @@ spec:
       labels:
         app: apitwitter
         tier: frontend
-        cversion: "5"
     spec:
       containers:
       - image: tilen/demo-svc-twitter
@@ -52,5 +51,7 @@ spec:
                 key: TWITTER_ACCESS_TOKEN_SECRET.txt
           - name: NODE_ENV
             value: "prod"
+          - name: VERSION
+            value: "2"
           - name: LOGSTASH_HOST
             value: "log.tomakic.com"

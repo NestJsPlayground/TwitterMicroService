@@ -28,6 +28,7 @@ export class TwitterController {
   @ApiResponse({ status: 200, description: `Returns list of all twitts`})
   async root() {
     // return await this.getTwitterData('microservice');
+    await this.cron();
     return await this.entryModel.find().lean();
   }
 
