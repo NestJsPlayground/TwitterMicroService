@@ -22,7 +22,6 @@ export class TwitterController {
 
   constructor(
     @Inject('EntryModelToken') private readonly entryModel: Model<any>) {
-    this.cron();
   }
 
   @Get()
